@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado directores</title>
+</head>
+<body>
+<nav>
+    <a th:href="@{/home}">Home</a>
+    <a th:href="@{/games}">Todos los juegos</a>
+    <a th:href="@{/directors}">Todos los director</a>
+</nav>
+<h1>Listado de directores</h1>
+<ul>
+    <a th:each="director:${directorList}" th:href="@{${'/directors/'+director.id+'/games'}}">
+        <li th:text="${director.name}"></li>
+    </a>
+</ul>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>objetos</h1>
+    <br>
+    <button class="btn btn-primary" onclick="multiplicar()">llamada a funcion</button>
+    <div class="divtabla"></div>
+</body>
+<script>
+    function multiplicar() {
+        let numero = window.prompt("Dime la tabla de multiplicar que quieres saber:");
+        console.log("Número:", numero);
+        let miDiv = document.getElementById("divtabla")
+        let miTabla = "<table border=1>"
+        miDiv.innerHTML = miTabla
+        for (let i = 0; i <= 10; i++) {
+            let resultado = numero * i
+            miTabla += " <td>" + numero + " x " + i + " = " + resultado
+        }
+        miTabla += "</table>"
+    }
+</script>
+
+</html>

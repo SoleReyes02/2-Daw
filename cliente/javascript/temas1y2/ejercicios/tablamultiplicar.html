@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de multiplicar</title>
+</head>
+<body>
+    <h1>Tabla de multiplicar</h1>
+    <div id="div1"></div>
+</body>
+
+<script>
+/*/*haz una tabla de multiplicar con un numero que pida un usuario*//*
+    que el usuario introduzca el numero con el prompt
+    div id tabla usar el document.getElementById*/
+    let miDiv=document.getElementById("div1")
+    console.log(miDiv)
+    
+    let numero = window.prompt("Dime la tabla de multiplicar que quieres saber:");
+    console.log("Número:", numero);
+    let miTabla="<table border=1>"
+
+    for(let i=0; i<=10; i++){
+        let resultado=numero*i
+        miTabla+=" <td>" + numero + " x " + i + " = " + resultado
+    }
+    miTabla+="</table>"
+    miDiv.innerHTML= miTabla
+    
+    </script>
+</html>

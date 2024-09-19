@@ -1,0 +1,42 @@
+/*para ponerlo de forma generica 
+sin repetir todo usamos*/
+for(v:1,9){
+    .bgc-turquesa-v{
+        background-color: hsl(169,50%,v*10);
+    }
+}
+div{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+}
+
+/*escrito de forma facil pero repetitiva y poco factible*/
+.color9{
+    background-color: hsl(169,50%,90%);
+}
+.color8{
+   background-color: hsl(169,50%,80%);
+}
+.color7{
+   background-color: hsl(169,50%,70%);
+}
+.color6{
+    background-color: hsl(169,50%,60%);
+}
+/*COLOR DE REFERENCIA*/
+.color5{
+    background-color: hsl(169,50%,50%);
+}
+.color4{
+    background-color: hsl(169,50%,40%);
+}
+.color3{
+    background-color: hsl(169,50%,30%);
+}
+.color2{
+    background-color: hsl(169,50%,20%);
+}
+.color1{
+    background-color: hsl(169,50%,10%);
+}

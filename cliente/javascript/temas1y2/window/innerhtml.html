@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>pagina vacia</h1>
+<div id="div1"></div>
+</body>
+<script>
+let miDiv=document.getElementById("div1")
+console.log(miDiv)
+miDiv.innerHTML
+
+let miTabla="<table border=1>"
+for(let i=0; i<4; i++){
+    miTabla+="<td>hols" + i + "<td>"
+}
+miTabla+="</table>"
+miDiv.innerHTML= miTabla
+
+</script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalles de un juego</title>
+</head>
+<body>
+<nav>
+    <a th:href="@{/home}">Home</a>
+    <a th:href="@{/games}">Todos los juegos</a>
+    <a th:href="@{/directors}">Todos los director</a>
+</nav>
+<h1>Detalles de un juego</h1>
+<p><strong>Titulo:</strong> <span th:text="${game.title}">Titulo</span></p>
+<p><strong>Año de lanzamiento:</strong> <span th:text="${game.release_year}">Año lanzamiento</span></p>
+<p><strong>Descripcion:</strong> <span th:text="${game.description}">Descripcion</span></p>
+<p><strong>Director:</strong> <span th:text="${game.director.name}">Director Name</span></p>
+<ul>
+    <li th:each="character:${game.characterList}" th:text="|${character.name} (${character.role})|"></li>
+</ul>
+</body>
+</html>

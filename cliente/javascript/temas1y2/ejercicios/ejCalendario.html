@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calendario</title>
+</head>
+
+<body>
+    <div id="calendario"></div>
+</body>
+<script>
+    let meses = ["Enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
+    let diasmes = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+    let fechaActual = new Date()
+    let diauno = fechaActual.setDate(1)
+
+    let diasemana = fechaActual.getDay()
+    diasemana = (diasemana == 0) ? 7 : diasemana
+
+    let mes = meses[fechaActual.getMonth()]
+
+    inicio = 1 - (diasemana - 1)
+    let cal = "<table border=1><tr><td>L<td>M<td>X<td>J<td>V<td>S<td>D<tr>"
+
+    n = 0
+    for (i = inicio; i <= diasmes; i++) {
+        if (n % 7 == 0) cal += "<tr>"
+        let texto = (i <= 0) ? " " : i
+        cal += "<td>" + texto
+        n++
+    }
+    cal += "</table>"
+     document.getElementById("calendario").innerHTML = cal
+
+</script>
+
+</html>

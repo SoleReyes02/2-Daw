@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>objetos</h1>
+    <br>
+    <button class="btn btn-primary" onclick="hola()">llamada a funcion</button>
+</body>
+<script>
+    function hola() {
+        alert("hola")
+    }
+    let fechaActual = new Date();
+    let anyo = fechaActual.getFullYear()
+    let mes = fechaActual.getMonth()
+    let dia = fechaActual.getDate()
+    let diasemana=fechaActual.getDay()
+
+    console.log(anyo)
+    console.log(mes + 1)
+    console.log(dia)
+    console.log(diasemana)
+
+    fechaActual.setDate(25)/*modifica la fecha con el set*/
+
+</script>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado Juegos</title>
+</head>
+<body>
+<nav>
+    <a th:href="@{/home}">Home</a>
+    <a th:href="@{/games}">Todos los juegos</a>
+    <a th:href="@{/directors}">Todos los director</a>
+</nav>
+<h1>Listado de juegos</h1>
+<ul>
+    <a th:each="game:${gameList}" th:href="@{${'/games/'+game.game_code}}">
+        <li th:text="${game.title}"></li>
+    </a>
+</ul>
+<form action="#" th:action="@{'/games'}" method="post">
+    <button type="submit">Añadir libro</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="fecha"></div>
+</body>
+<script>
+
+    let meses=["Enero", "febrero", "marzo", "abril", "mayo", "junio", "julio","agosto", "septiembre","octubre","noviembre","diciembre"]
+    let diasemanaTexto=["domingo", "lunes", "martes", "miercoles", "jueves","viernes", "sabado"]
+    let fechaActual = new Date()
+    let anyo = fechaActual.getFullYear()
+    let mes = meses[fechaActual.getMonth()]
+    let dia = fechaActual.getDate()
+    let diasemana = diasemanaTexto [fechaActual.getDay()]
+
+ let fechahoy= "hoy es "+diasemana+" "+dia+" de "+mes+" de "+anyo
+ document.getElementById("fecha").innerHTML=fechahoy
+
+
+</script>
+
+</html>
+<!--ejercicio para poner la fecha hoy es (dia semana) num del dia, mes y año-->
